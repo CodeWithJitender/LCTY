@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-archivo {
+  font-family: "Archivo", sans-serif;
+}
+.font-calvino-italic {
+  font-family: 'Calvino Grande Trial';
+  font-weight: 300;
+  font-style: italic;
+}
+.font-calvino {
+  font-family: 'Calvino Grande Trial';
+  font-weight: 600;
+  font-style: normal;
+}
