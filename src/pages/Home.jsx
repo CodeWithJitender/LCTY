@@ -5,6 +5,11 @@ import ProgramsSection from "../sections/home/ProgramsSection";
 import ProgramsSectionCopy from "../sections/home/ProgramsSectionCopy";
 import LetsShow from "../sections/home/LetsShow";
 import Hero from "../sections/home/Hero";
+import StepOneSection from "../sections/home/StepOneSection";
+import ResultSection from "../sections/home/ResultSection";
+import SuccessStories from "../sections/home/SuccessStories";
+import MarqueeHome from "../sections/home/MarqueeHome";
+import ClinicLocation from "../sections/home/ClinicLocation";
 
 function Home() {
   return (
@@ -15,6 +20,11 @@ function Home() {
       <ProgramsSection />
       <ProgramsSectionCopy />
       <LetsShow />
+      <StepOneSection />
+      <ResultSection />
+      <SuccessStories />
+      <ClinicLocation />
+      {/* <MarqueeHome /> */}
     </div>
   );
 }

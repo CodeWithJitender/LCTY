@@ -6,16 +6,16 @@ function Card({ data }) {
   const { title, image, redirectUrl } = data;
   const navigate = useNavigate();
   return (
-    <div className="card  p-2"
+    <div className="card  p-5 cursor-pointer"
        onClick={() => navigate(data.redirectUrl)}
     >
       <div className="card-img">
-        <img src={image} alt="" />
+        <img src={image} className="w-full" alt="" />
       </div>
       <div className="card-text primary-bg-2">
         <Link to={redirectUrl} className="flex items-center justify-between">
           <div className="card-title font-archivo text-white font-semibold p-3">{title}</div>
-          <div className="card-icon w-[50px] h-[50px] leading-[50px] text-center bg-[#ff96ff] text-white">
+          <div className="card-icon w-[60px] h-[60px] h- leading-[60px] text-center bg-[#ff96ff] text-white btn-t">
            <i class="fal fa-arrow-up rotate-45 "></i>
           </div>
         </Link>

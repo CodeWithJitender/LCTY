@@ -3,7 +3,7 @@ import ButtonPrimary from "../../components/ButtonPrimary";
 
 function LetsShow() {
   return (
-    <div className="bg-white pb-[50px]">
+    <div className="bg-white pb-[50px] h-[100vh] flex items-center justify-center">
       <div className="container-fixed flex items-center gap-5 justify-center">
         <h1 className="secondary-text-1 h1 mb-4">
           <span className="font-calvino">Let’s</span>

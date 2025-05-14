@@ -12,17 +12,17 @@ const WhyYouAreHereSection = () => {
           <img
             src={imageUrl}
             alt="Kids Yoga"
-            className="rounded-lg w-full mb-5"
+            className=" w-full mb-5"
           />
           <img
             src={imageUrl}
             alt="Kids Yoga"
-            className="rounded-lg w-full mb-5"
+            className=" w-full mb-5"
           />
           <img
             src={imageUrl}
             alt="Kids Yoga"
-            className="rounded-lg w-full mb-5"
+            className=" w-full mb-5"
           />
         </div>
 

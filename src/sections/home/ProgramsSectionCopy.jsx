@@ -52,7 +52,7 @@ const ProgramsSectionCopy = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Right Text & Program Boxes */}
           <div>
-            <p className="text-purple-600 mb-6">
+            <p className="body-t-color btn-t mb-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               accumsan eros non fringilla faucibus. Sed scelerisque ultrices
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci

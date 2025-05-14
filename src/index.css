@@ -24,7 +24,12 @@
 .container-fixed {
   max-width: 1600px;
   margin: auto;
-  padding: 80px 50px 0px 50px;
+  padding: 100px 50px;
+}
+.container-xxl {
+  max-width: 1600px;
+  margin: auto;
+  /* padding: 0px 50px; */
 }
 
 .primary-bg {

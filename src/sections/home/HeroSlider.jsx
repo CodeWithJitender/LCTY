@@ -70,7 +70,7 @@ function HeroSlider() {
     },
   ];
   return (
-    <div className="hero-slider mt-5">
+    <div className="hero-slider mt-5 w-full overflow-hidden">
       <Slider {...settings}>
         {slides.map((src, index) => (
           <Card key={index} data={src} />

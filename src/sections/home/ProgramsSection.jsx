@@ -59,7 +59,7 @@ const ProgramsSection = () => {
 
           {/* Right Text & Program Boxes */}
           <div>
-            <p className="text-purple-600 mb-6">
+            <p className="body-t font-archivo mt-3 leading-[100%] body-t-color">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               accumsan eros non fringilla faucibus. Sed scelerisque ultrices
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci

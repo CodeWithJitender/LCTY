@@ -11,7 +11,7 @@ function ButtonPrimary({ text, link }) {
       <span className="absolute inset-0 bg-gradient-to-r from-pink-300 via-pink-400 to-pink-300 opacity-75 blur-2xl group-hover:blur-3xl transition-all duration-500"></span>
 
       {/* White inner area */}
-      <span className="relative z-10 bg-white rounded-full px-10 py-4">
+      <span className="relative z-10 bg-white rounded-full px-[105px] py-[23px]">
         {text}
       </span>
     </Link>
