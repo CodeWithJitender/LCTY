@@ -6,7 +6,7 @@ function Card({ data }) {
   const { title, image, redirectUrl } = data;
   const navigate = useNavigate();
   return (
-    <div className="card px-2 md:p-5 cursor-pointer"
+    <div className="card p-3 md:p-5 cursor-pointer"
        onClick={() => navigate(data.redirectUrl)}
     >
       <div className="card-img">
