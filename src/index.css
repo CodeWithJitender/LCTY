@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.button-primary {
+  background: linear-gradient(to right, #ff96ffde 0%, #ffd6ff 100%) !important;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50px;
+}
 .font-calvino-italic {
   font-family: "Calvino Grande Trial";
   font-weight: 300;
@@ -86,13 +92,14 @@
 
 .h1 {
   font-size: clamp(40px, 5vw, 85px);
+  line-height: normal;
 }
 .h2 {
   font-size: clamp(22px, 5vw, 40px);
 }
 
 .body-t {
-  font-size: clamp(14px, 5vw, 21px);
+  font-size: clamp(14px, 5vw, 22px);
 }
 
 .btn-t {
@@ -100,4 +107,60 @@
 }
 .nav-t {
   font-size: clamp(16px, 5vw, 24px);
+}
+
+.band {
+  width: 105%;
+  height: 100%;
+  /* background-color: #8a63ff; */
+  transform: rotate(-2.8deg) translate(-10px, 50px);
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+p {
+  color: #8a63ff;
+  font-size: clamp(14px, 5vw, 22px);
+}
+
+@media screen and (max-width: 768px) {
+  .container-fixed {
+    padding: 50px 20px;
+  }
+  .container-xxl {
+    padding: 0px 20px;
+  }
+  .h1 {
+    font-size: 40px, 5vw, 85px);
+  }
+  .h2 {
+    font-size: clamp(22px, 5vw, 40px);
+  }
+
+  .body-t {
+    font-size: clamp(14px, 5vw, 22px);
+  }
+
+  .btn-t {
+    font-size: clamp(14px, 5vw, 22px);
+  }
+  .nav-t {
+    font-size: clamp(16px, 5vw, 24px);
+  }
 }

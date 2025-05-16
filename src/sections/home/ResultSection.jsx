@@ -28,7 +28,7 @@ const ResultSection = () => {
             <img src="result.jpg" className="w-full" alt="" />
 
           {/* Stat Box */}
-          <div className="absolute xl:-right-40 xl:-top-40 bg-[#8A63FF80] backdrop-blur-lg text-white p-6 rounded-2xl w-80 shadow-lg z-10 text-center">
+          <div className="absolute right-[-10%] top-[-24%] bg-[#8A63FF80] backdrop-blur-lg text-white p-6 rounded-2xl w-80 shadow-lg z-10 text-center">
             <h3 className="text-4xl font-calvino mb-2">Lorem ipsum dolor</h3>
             <p className="font-calvino-italic body-t mb-2">Lorem ipsum</p>
             <div className="text-5xl font-archivo font-bold mt-5 mb-3">6546</div>

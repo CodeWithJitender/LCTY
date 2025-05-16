@@ -10,6 +10,8 @@ import ResultSection from "../sections/home/ResultSection";
 import SuccessStories from "../sections/home/SuccessStories";
 import MarqueeHome from "../sections/home/MarqueeHome";
 import ClinicLocation from "../sections/home/ClinicLocation";
+import ContactSection from "../sections/home/ContactSection";
+import BlogSection from "../sections/home/BlogSection";
 
 function Home() {
   return (
@@ -24,7 +26,9 @@ function Home() {
       <ResultSection />
       <SuccessStories />
       <ClinicLocation />
-      {/* <MarqueeHome /> */}
+      <MarqueeHome />
+      <ContactSection />
+      <BlogSection />
     </div>
   );
 }

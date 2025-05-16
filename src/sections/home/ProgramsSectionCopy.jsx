@@ -32,10 +32,10 @@ const ProgramsSectionCopy = () => {
   const imageUrl = "Yoga3.png";
 
   return (
-    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <section className="">
       <div className="container-fixed">
         {/* Heading */}
-        <h2 className="secondary-text-1 mb-10 max-w-[900px] h2 leading-tight ms-auto text-right">
+        <h2 className="secondary-text-1 mb-10 max-w-[900px] h2 leading-tight ms-auto lg:text-right">
           <span className="font-calvino"> Lorem ipsum </span>
           <span className="font-calvino-italic">
             {" "}
@@ -58,12 +58,17 @@ const ProgramsSectionCopy = () => {
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
               fermentum commodo.
             </p>
+             <img
+            src={imageUrl}
+            alt="Rehabilitation"
+            className="rounded-lg  object-cover lg:hidden block mb-8"
+          />
 
             <div className="space-y-4">
               {programs.map((program, index) => (
                 <div
                   key={index}
-                  className="p-6 flex items-end gap-4 justify-between hover:bg-[#AE93FF] group transition-colors duration-300"
+                  className="p-3 lg:p-6 flex items-end lg:gap-4 justify-between hover:bg-[#AE93FF] group transition-colors duration-300"
                 >
                   <div className="flex items-start gap-4">
                     <h3 className="secondary-text-1 h2 font-archivo group-hover:text-white transition-colors">
@@ -87,7 +92,7 @@ const ProgramsSectionCopy = () => {
           <img
             src={imageUrl}
             alt="Rehabilitation"
-            className="rounded-lg w-full object-cover"
+            className="rounded-lg  object-cover hidden lg:block"
           />
 
           

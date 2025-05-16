@@ -44,9 +44,9 @@ function SuccessStories() {
             <ButtonPrimary link="/register" text="Register Now" className="" />
           </div>
         </div>
-        <div className="story-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 mt-10 pb-[100px]">
+        <div className="story-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-20 lg:mt-0 sm:gap-5 lg:gap-20  pb-[100px]">
           <Card data={data[0]}/>
-          <div className="relative translate-y-[70%]"> 
+          <div className="relative sm:translate-y-[70%]"> 
             <Card data={data[1]}/>
           </div>
           <Card data={data[2]}/>

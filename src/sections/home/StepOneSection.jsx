@@ -3,12 +3,12 @@ import React from "react";
 
 const StepOneSection = () => {
   return (
-    <section className="w-full primary-bg-2">
+    <section className="w-full primary-bg-2 ">
       <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="flex flex-col-reverse lg:flex-row gap-10 items-center">
           {/* Left Column */}
-          <div className="px-[80px]">
-            <div className="text-white space-y-6 h-[100vh] flex flex-col justify-center ">
+          <div className="pb-10 px-5 lg:px-[80px] lg:w-[50%]">
+            <div className="text-white space-y-6 lg:h-screen flex flex-col justify-center ">
               {/* Top Row with icon and step number */}
               <div className="flex items-center justify-between border-b border-white pb-2">
                 <div className="text-2xl">
@@ -29,13 +29,13 @@ const StepOneSection = () => {
               </h2>
 
               {/* Description */}
-              <p className="font-archivo leading-[120%]">
+              <p className="font-archivo leading-[120%] text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 accumsan eros non fringilla faucibus. Sed scelerisque ultrices
                 dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
                 fermentum commodo.
               </p>
-              <p className="font-archivo leading-[120%]">
+              <p className="font-archivo leading-[120%] text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 accumsan eros non fringilla faucibus. Sed scelerisque ultrices
                 dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
@@ -53,12 +53,14 @@ const StepOneSection = () => {
           </div>
 
           {/* Right Column (Image) */}
-          <div className="flex justify-center h-[100vh]">
-            <img
+          <div className="flex justify-center items-center lg:h-screen bg-[#FFAFFF] p-5 lg:p-10 lg:w-[50%]">
+            <div className="">
+              <img
               src="Step-1.png"
-              alt="Login Illustration"
-              className="w-full h-full object-cover object-center"
+              alt=""
+              className="w-full"
             />
+            </div>
           </div>
         </div>
       </div>

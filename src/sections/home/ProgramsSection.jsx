@@ -32,10 +32,10 @@ const ProgramsSection = () => {
   const imageUrl = "Yoga3.png";
 
   return (
-    <section className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <section className="">
       <div className="container-fixed">
         {/* Heading */}
-        <h2 className="secondary-text-1 mb-10 max-w-[900px] h2 leading-tight">
+        <h2 className="secondary-text-1 mb-4 lg:mb-10 max-w-[900px] h2 leading-tight">
           <span className="font-calvino"> Lorem ipsum </span>
           <span className="font-calvino-italic">
             {" "}
@@ -47,19 +47,29 @@ const ProgramsSection = () => {
             In accumsan eros non fringilla faucibus.{" "}
           </span>
         </h2>
+        <p className="block lg:hidden body-t font-archivo mt-3 leading-[100%] body-t-color mb-10">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan
+          eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae
+          bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo.
+        </p>
 
+        <img
+          src={imageUrl}
+          alt="Rehabilitation"
+          className="rounded-lg w-full object-cover block lg:hidden mb-8"
+        />
         {/* Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Image */}
           <img
             src={imageUrl}
             alt="Rehabilitation"
-            className="rounded-lg w-full object-cover"
+            className="rounded-lg w-full object-cover hidden lg:block"
           />
 
           {/* Right Text & Program Boxes */}
           <div>
-            <p className="body-t font-archivo mt-3 leading-[100%] body-t-color">
+            <p className="body-t font-archivo mt-3 leading-[100%] body-t-color hidden lg:block ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               accumsan eros non fringilla faucibus. Sed scelerisque ultrices
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
@@ -70,7 +80,7 @@ const ProgramsSection = () => {
               {programs.map((program, index) => (
                 <div
                   key={index}
-                  className="p-6 flex items-end gap-4 justify-between hover:bg-[#AE93FF] group transition-colors duration-300"
+                  className="p-3 lg:p-6 flex items-end lg:gap-4 justify-between hover:bg-[#AE93FF] group transition-colors duration-300"
                 >
                   <div className="flex items-start gap-4">
                     <h3 className="secondary-text-1 h2 font-archivo group-hover:text-white transition-colors">

@@ -5,15 +5,12 @@ function ButtonPrimary({ text, link }) {
   return (
     <Link
       to={`/${link}`}
-      className="relative inline-block px-10 py-4 text-pink-500 font-bold text-xl rounded-full overflow-hidden  font-archivo"
+      className=""
     >
-      {/* Glow Border */}
-      <span className="absolute inset-0 bg-gradient-to-r from-pink-300 via-pink-400 to-pink-300 opacity-75 blur-2xl group-hover:blur-3xl transition-all duration-500"></span>
-
-      {/* White inner area */}
-      <span className="relative z-10 bg-white rounded-full px-[105px] py-[23px]">
-        {text}
-      </span>
+      <div className="button-primary font-archivo font-bold secondary-text-1 body-t">
+        {/* White inner area */}
+        <span className="relative z-10  rounded-full bg-white px-[23px] py-5 inline-block">{text}</span>
+      </div>
     </Link>
   );
 }
