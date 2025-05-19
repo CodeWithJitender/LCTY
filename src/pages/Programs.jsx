@@ -1,9 +1,10 @@
 import React from 'react'
+import ModernTherapy from '../sections/programs/ModernTherapy'
 
 function Programs() {
   return (
     <div>
-      Programs
+      <ModernTherapy />
     </div>
   )
 }

@@ -43,13 +43,13 @@ const WhyYouAreHereSection = () => {
     ],
   };
   return (
-    <section className="bg-white pt-16 md:py-12">
+    <section className="bg-white pt-16 md:py-12 ">
       <h2 className="h1 mb-4 secondary-text-1 px-5 text-center block lg:hidden">
         <span className="font-calvino">Why</span>
         <span className="font-calvino-italic"> you </span>
         <span className="font-calvino">are here!</span>
       </h2>
-      <div className="block lg:hidden mb-5">
+      <div className="block lg:hidden mb-5 w-full overflow-x-hidden">
         <Slider {...settings}>
           <div className="px-1">
             <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />

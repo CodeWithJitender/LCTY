@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  overflow-x: hidden !important;
+}
 .button-primary {
   background: linear-gradient(to right, #ff96ffde 0%, #ffd6ff 100%) !important;
   display: inline-block;
@@ -97,6 +100,9 @@
 .h2 {
   font-size: clamp(22px, 5vw, 40px);
 }
+.h3 {
+  font-size: clamp(35px, 5vw, 60px);
+}
 
 .body-t {
   font-size: clamp(14px, 5vw, 22px);
@@ -138,7 +144,51 @@ p {
   color: #8a63ff;
   font-size: clamp(14px, 5vw, 22px);
 }
+.outer-circle {
+  background: linear-gradient(
+    180.04deg,
+    rgba(255, 150, 255, 0.4) 0.03%,
+    rgba(138, 99, 255, 0.16) 99.83%
+  );
+  border: 1.7px solid;
+  border-image-source: linear-gradient(
+    148.64deg,
+    rgba(255, 150, 255, 0.5) 7.39%,
+    rgba(255, 255, 255, 0.05) 92.61%
+  );
+}
+.inner-circle {
+  background: linear-gradient(
+    180.04deg,
+    rgba(255, 150, 255, 0.4) 0.03%,
+    rgba(138, 99, 255, 0.16) 99.83%
+  );
+  border: 1.7px solid;
+  border-image-source: linear-gradient(
+    148.64deg,
+    rgba(255, 150, 255, 0.5) 7.39%,
+    rgba(255, 255, 255, 0.05) 92.61%
+  );
+}
+.journey-circle{
+  position: relative;
+  /* z-index: 10 ; */
+}
+.journey-img::after {
+  content: "";
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(
+    /* 90deg, */ #ff96ff -24.25%,
+    #ffd6ff 44.09%,
+    rgba(255, 214, 255, 0) 100%
+  );
 
+  transform: translate(-50%, 10%);
+}
 @media screen and (max-width: 768px) {
   .container-fixed {
     padding: 50px 20px;
@@ -146,8 +196,11 @@ p {
   .container-xxl {
     padding: 0px 20px;
   }
+  .journey-img::after {
+    width: 0px;
+  }
   .h1 {
-    font-size: 40px, 5vw, 85px);
+    font-size: (40px, 5vw, 85px);
   }
   .h2 {
     font-size: clamp(22px, 5vw, 40px);
