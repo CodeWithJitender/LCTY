@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const imageUrl = "Yoga3.png";
 
-const WhyYouAreHereSection = () => {
+const Culture = () => {
   const settings = {
     centerMode: true,
     centerPadding: "60px", // optional: adjust padding around centered slide
@@ -64,29 +64,31 @@ const WhyYouAreHereSection = () => {
       </div>
       <div className="container-fixed ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* Image */}
-          <div className="hidden lg:block">
-            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
-            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
-            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
-          </div>
-
           {/* Text Content */}
-          <div className="sticky top-5">
+          <div className="sticky top-40">
             <h2 className="h1 mb-4 secondary-text-1 hidden lg:block">
-              <span className="font-calvino">Why</span>
-              <span className="font-calvino-italic"> you </span>
-              <span className="font-calvino">are here!</span>
+              <span className="font-calvino">Lorem</span>
+              <span className="font-calvino-italic"> dolor sit </span>
             </h2>
 
             <p className="body-t mb-6 body-t-color lg:mt-10 md:mt-0">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              accumsan eros Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. In accumsan erosLorem ipsum dolor sit amet, consectetur
-              adipiscing elit. In accumsan eros
+              accumsan eros non fringilla faucibus. Sed scelerisque ultrices
+              dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
+              fermentum commodo. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit. In accumsan eros non fringilla faucibus. Sed
+              scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis
+              eu nisi non orci fermentum commodo.
+            </p>
+            <p className="body-t mb-6 body-t-color lg:mt-10 md:mt-0">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              accumsan eros non fringilla faucibus. Sed scelerisque ultrices
+              dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
+              fermentum commodo. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
             </p>
 
-            <ul className="space-y-3 mb-8">
+            {/* <ul className="space-y-3 mb-8">
               {[...Array(5)].map((_, i) => (
                 <li
                   key={i}
@@ -98,9 +100,15 @@ const WhyYouAreHereSection = () => {
                   </span>
                 </li>
               ))}
-            </ul>
+            </ul> */}
 
             <ButtonPrimary link="discover" text="Register Now" />
+          </div>
+          {/* Image */}
+          <div className="hidden lg:block">
+            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
+            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
+            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
           </div>
         </div>
       </div>
@@ -108,4 +116,4 @@ const WhyYouAreHereSection = () => {
   );
 };
 
-export default WhyYouAreHereSection;
+export default Culture;

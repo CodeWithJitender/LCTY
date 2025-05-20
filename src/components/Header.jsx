@@ -56,7 +56,9 @@ const Header = () => {
         >
           <FaBars />
         </button>
+       <Link to="/" className="flex items-center gap-2">
         <img src={logo} alt="Logo" className="h-24 mx-auto" />
+        </Link>
         <button
           onClick={() => setSearchOpen(true)}
           className="primary-bg-2 text-xl text-white rounded-full p-3"

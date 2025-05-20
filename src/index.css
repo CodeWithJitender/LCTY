@@ -189,6 +189,29 @@ p {
 
   transform: translate(-50%, 10%);
 }
+
+
+/* Program page  */
+.slider-container .slick-slide{
+opacity: .5;
+transition: .5s;
+}
+.slider-container .slick-slide.slick-active.slick-center.slick-current{
+opacity: 1;
+transform: scale(1.1);
+overflow: visible;
+transition: .5s;
+
+}
+.slick-list{
+  overflow: visible !important;
+transition: .5s;
+
+}
+
+.testimonial-item{
+  background-image: url('testimonial-bg.png');
+}
 @media screen and (max-width: 768px) {
   .container-fixed {
     padding: 50px 20px;
