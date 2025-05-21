@@ -2,10 +2,62 @@ import ButtonPrimary from "../../components/ButtonPrimary";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitType from "split-type";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const imageUrl = "Yoga3.png";
 
+
 const WhyYouAreHereSection = () => {
+ const containerRef = useRef();
+  const headingRef = useRef();
+  const contentRef = useRef();
+
+  // Register plugins
+  gsap.registerPlugin(ScrollTrigger);
+
+  useGSAP(() => {
+    // Split the heading into lines
+    const split = new SplitType(headingRef.current, {
+      type: "lines",
+      linesClass: "lineChildren block",
+    });
+
+    // Animate heading lines
+    gsap.from(split.lines, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 20px",
+        markers: true,
+      },
+    });
+
+    // Pin the text-content area
+    ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top top",
+      end: "bottom bottom",
+      pin: contentRef.current,
+      pinSpacing: true,
+      scrub: false,
+    });
+
+    return () => {
+      split.revert();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   const settings = {
     centerMode: true,
     centerPadding: "60px", // optional: adjust padding around centered slide
@@ -43,8 +95,8 @@ const WhyYouAreHereSection = () => {
     ],
   };
   return (
-    <section className="bg-white pt-16 md:py-12 ">
-      <h2 className="h1 mb-4 secondary-text-1 px-5 text-center block lg:hidden">
+    <section className="bg-white pt-16 md:py-12" ref={containerRef} >
+      <h2 className="h1 secondary-text-1 px-5 text-center block lg:hidden overflow-hidden"  ref={headingRef}>
         <span className="font-calvino">Why</span>
         <span className="font-calvino-italic"> you </span>
         <span className="font-calvino">are here!</span>
@@ -72,8 +124,8 @@ const WhyYouAreHereSection = () => {
           </div>
 
           {/* Text Content */}
-          <div className="sticky top-5">
-            <h2 className="h1 mb-4 secondary-text-1 hidden lg:block">
+          <div className="text-content sticky top-5" ref={contentRef}>
+            <h2 className="h1 mb-4 secondary-text-1 hidden lg:block overflow-hidden" ref={headingRef}> 
               <span className="font-calvino">Why</span>
               <span className="font-calvino-italic"> you </span>
               <span className="font-calvino">are here!</span>
