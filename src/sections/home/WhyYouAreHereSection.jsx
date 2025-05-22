@@ -6,20 +6,19 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { ScrollTrigger } from "gsap/all";
+
 
 const imageUrl = "Yoga3.png";
 
+// Register plugins
+gsap.registerPlugin(ScrollTrigger);
 
 const WhyYouAreHereSection = () => {
- const containerRef = useRef();
-  const headingRef = useRef();
-  const contentRef = useRef();
-
-  // Register plugins
-  gsap.registerPlugin(ScrollTrigger);
+ const containerRef = useRef(null);
+  const headingRef = useRef(null);
+  const contentRef = useRef(null);
+  
 
   useGSAP(() => {
     // Split the heading into lines
@@ -37,26 +36,19 @@ const WhyYouAreHereSection = () => {
       ease: "power4.out",
       scrollTrigger: {
         trigger: containerRef.current,
-        start: "top 20px",
+        start: "top 50%",
+        end: "top 20%",
+        scroller:".main",
+        scrub: 1,
         markers: true,
       },
-    });
-
-    // Pin the text-content area
-    ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: "top top",
-      end: "bottom bottom",
-      pin: contentRef.current,
-      pinSpacing: true,
-      scrub: false,
     });
 
     return () => {
       split.revert();
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, []);
+  }, [containerRef.current,headingRef.current,contentRef.current]);
 
   const settings = {
     centerMode: true,
