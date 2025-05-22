@@ -3,11 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useRef } from "react";
+import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/all";
-
 
 const imageUrl = "Yoga3.png";
 
@@ -29,9 +28,9 @@ const WhyYouAreHereSection = () => {
 
     // Animate heading lines
     gsap.from(split.lines, {
-      y: 100,
+      y: 400,
       opacity: 0,
-      duration: 1,
+      duration: 2,
       stagger: 0.1,
       ease: "power4.out",
       scrollTrigger: {
@@ -87,7 +86,7 @@ const WhyYouAreHereSection = () => {
     ],
   };
   return (
-    <section className="bg-white pt-16 md:py-12" ref={containerRef} >
+    <section className="bg-white pt-16 md:py-12"  >
       <h2 className="h1 secondary-text-1 px-5 text-center block lg:hidden overflow-hidden"  ref={headingRef}>
         <span className="font-calvino">Why</span>
         <span className="font-calvino-italic"> you </span>
@@ -106,7 +105,7 @@ const WhyYouAreHereSection = () => {
           </div>
         </Slider>
       </div>
-      <div className="container-fixed ">
+      <div className="container-fixed relative ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Image */}
           <div className="hidden lg:block">
@@ -116,7 +115,7 @@ const WhyYouAreHereSection = () => {
           </div>
 
           {/* Text Content */}
-          <div className="text-content sticky top-5" ref={contentRef}>
+          <div className="why-text-content sticky top-5" >
             <h2 className="h1 mb-4 secondary-text-1 hidden lg:block overflow-hidden" ref={headingRef}> 
               <span className="font-calvino">Why</span>
               <span className="font-calvino-italic"> you </span>

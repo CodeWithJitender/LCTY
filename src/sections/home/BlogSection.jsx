@@ -1,6 +1,10 @@
 import React from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitType from "split-type";
+import { Link } from "react-router-dom";
 const blogs = [
   {
     title: "Lorem",
@@ -23,22 +27,43 @@ const blogs = [
 ];
 
 export default function BlogSection() {
+   const containerRef = useRef();
+  const headingRef = useRef();
+    useGSAP(() => {
+    const splitText = new SplitType(headingRef.current, {
+      type: "lines",
+      linesClass: "lineChildren",
+    });
+    const tl = gsap.timeline();
+    tl.from(splitText.lines, {
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+    return () => {
+      splitText.revert();
+    };
+  }, { scope: containerRef });
   return (
-    <section className="">
+    <section className="" ref={containerRef}>
       <div className="container-fixed">
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-[40%]">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-pink-400 font-calvino mb-10 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-pink-400 font-calvino mb-10 leading-tight overflow-hidden" ref={headingRef}>
               Lorem <span className="italic font-normal">dolor sit</span>{" "}
               <span className="font-bold">amet adipiscing</span>
             </h2>
           </div>
 
-          <div className="space-y-12 lg:w-[60%]">
-            {blogs.map((blog, index) => (
+          <div className="lg:w-[60%]">
+            <div className="flex flex-col lg:flex-row gap-6">
+              <div className="">
+                {blogs.map((blog, index) => (
               <div
                 key={index}
-                className="grid md:grid-cols-2 primary-bg-2 text-white overflow-hidden shadow-lg"
+                className="grid md:grid-cols-2 primary-bg-2 text-white overflow-hidden shadow-lg mt-4"
               >
                 <div className="p-5 pb-0 md:pb-5 md:pe-0">
                   <img
@@ -74,6 +99,16 @@ export default function BlogSection() {
                 </div>
               </div>
             ))}
+              </div>
+              <div className="flex items-end justify-center ">
+                <Link to="/blog">
+                <div className="w-14 h-14 secondary-bg-1 flex items-center justify-center rounded-full text-white body-t hover:bg-[#fab4fa] transition-all">
+                <i class="fal fa-arrow-up rotate-45 "></i>
+                </div>
+                </Link>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
