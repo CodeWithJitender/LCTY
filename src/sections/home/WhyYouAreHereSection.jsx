@@ -86,7 +86,7 @@ const WhyYouAreHereSection = () => {
     ],
   };
   return (
-    <section className="bg-white pt-16 md:py-12"  >
+    <section ref={containerRef} className="bg-white pt-16 md:py-12"  >
       <h2 className="h1 secondary-text-1 px-5 text-center block lg:hidden overflow-hidden"  ref={headingRef}>
         <span className="font-calvino">Why</span>
         <span className="font-calvino-italic"> you </span>

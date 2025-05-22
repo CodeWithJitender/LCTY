@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <div data-scroll-container ref={scrollRef} className="main h-screen overflow-y-auto ">
+    <div data-scroll-container ref={scrollRef} className="main h-screen  overflow-y-auto">
       <Router>
         {/* <ScrollToTop /> */}
         <Header />
