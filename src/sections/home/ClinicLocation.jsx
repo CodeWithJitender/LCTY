@@ -1,6 +1,10 @@
 import React from "react";
 import Card from "../../components/Card"; // Adjust path as necessary
 import ButtonPrimary from "../../components/ButtonPrimary";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitType from "split-type";
 
 // const clinics  = [
 //     {
@@ -21,6 +25,25 @@ import ButtonPrimary from "../../components/ButtonPrimary";
 //   ];
 
 export default function ClinicLocation() {
+   const containerRef = useRef();
+  const headingRef = useRef();
+    useGSAP(() => {
+    const splitText = new SplitType(headingRef.current, {
+      type: "lines",
+      linesClass: "lineChildren",
+    });
+    const tl = gsap.timeline();
+    tl.from(splitText.lines, {
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+    return () => {
+      splitText.revert();
+    };
+  }, { scope: containerRef });
   const clinics = [
     {
       title: "Clinic 1",
@@ -44,9 +67,9 @@ export default function ClinicLocation() {
     },
   ];
   return (
-    <section className="clinic-location">
+    <section className="clinic-location" ref={containerRef}>
       <div className="container-fixed">
-        <h1 className="h1 secondary-text-1 ">
+        <h1 className="h1 secondary-text-1 overflow-hidden" ref={headingRef}>
           <span className="font-calvino">Clinic </span>
           <span className="font-calvino-italic">location </span>
         </h1>

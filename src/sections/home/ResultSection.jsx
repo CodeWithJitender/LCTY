@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import SplitType from "split-type";
 
 const ResultSection = () => {
+  const containerRef = useRef();
+  const headingRef = useRef();
+    useGSAP(() => {
+    const splitText = new SplitType(headingRef.current, {
+      type: "lines",
+      linesClass: "lineChildren",
+    });
+    const tl = gsap.timeline();
+    tl.from(splitText.lines, {
+      duration: 1,
+      y: 300,
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.out",
+    });
+    return () => {
+      splitText.revert();
+    };
+  }, { scope: containerRef });
   return (
-    <section className="w-full px-4 py-16 bg-white overflow-hidden">
+    <section className="w-full px-4 py-16 bg-white overflow-hidden" ref={containerRef}>
       <div className="container-fixed">
-        <div className="max-w-[1200px]  space-y-10">
+        <div className="max-w-[1400px]  space-y-10">
           {/* Top Text */}
-          <div className="text-center md:text-left max-w-[900px]">
-            <h2 className="h2 secondary-text-1">
+          <div className="text-center md:text-left max-w-[1000px]">
+            <h2 className="h2 secondary-text-1 overflow-hidden" ref={headingRef} >
               <span className="font-calvino">Lorem ipsum</span>{" "}
               <span className="font-calvino-italic">
                 dolor sit amet, consectetur
@@ -17,15 +39,15 @@ const ResultSection = () => {
                 adipiscing elit. In accumsan eros non fringilla faucibus.
               </span>
             </h2>
-
-            <p className="body-t body-t-color">
+ 
+            <p className="body-t body-t-color mt-4 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               accumsan eros non fringilla faucibus. Sed scelerisque ultrices
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
               fermentum commodo. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <p className="body-t body-t-color">
+            <p className="body-t body-t-color mt-2">
               Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac.
               Duis eu nisi non orci fermentum commodo.
             </p>
