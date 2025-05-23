@@ -60,12 +60,12 @@ function SuccessStories() {
   return (
     <section className="success-stories" ref={containerRef}>
       <div className="container-fixed">
-        <h1 className="h1 secondary-text-1 text-center overflow-hidden" ref={headingRef}>
+        <h1 className="h1 secondary-text-1 md:text-center overflow-hidden" ref={headingRef}>
           <span className="font-calvino">Lorem</span>
           <span className="font-calvino-italic"> dolor sit amet </span>
           <span className="font-calvino">adipiscing</span>
         </h1>
-        <p className="body-t-color btn-t max-w-[75%] mx-auto text-center ">
+        <p className="body-t-color btn-t md:max-w-[75%] mx-auto mt-4 md:text-center ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan
           eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae
           bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo.
@@ -73,8 +73,8 @@ function SuccessStories() {
           eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae
           bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo.{" "}
         </p>
-        <div className="relative flex justify-center mt-10">
-          <div className="absolute top-[-100%] left-0 w-full text-center">
+        <div className="relative flex justify-center mt-5 md:mt-10">
+          <div className="absolute top-[-100%] left-0 w-full md:text-center">
             <ButtonPrimary link="/register" text="Register Now" className="" />
           </div>
         </div>

@@ -39,13 +39,13 @@ function ContactSection() {
   return (
     <div className="contact-section" ref={containerRef}>
       <div className="container-fixed">
-        <h1 className="h1 secondary-text-1 text-center overflow-hidden" ref={headingRef}>
+        <h1 className="h1 secondary-text-1 md:text-center overflow-hidden" ref={headingRef}>
           <span className="font-calvino">Lorem</span>
           <span className="font-calvino-italic"> dolor sit amet </span>
           <span className="font-calvino">adipiscing</span>
         </h1>
-        <p className="max-w-[1200px] m-auto text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. </p>
-        <div className="flex justify-center mt-10">
+        <p className="max-w-[1200px] m-auto md:text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. </p>
+        <div className="flex md:justify-center mt-10">
             <ButtonPrimary link="/contact-us" text="Contact Us"/>
         </div>
       </div>

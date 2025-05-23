@@ -86,7 +86,7 @@ const WhyYouAreHereSection = () => {
   };
   return (
     <section ref={containerRef} className="bg-white pt-16 md:py-12"  >
-      <h2 className="h1 secondary-text-1 px-5 text-center block lg:hidden overflow-hidden"  ref={headingRef}>
+      <h2 className="h1 secondary-text-1 px-5 text-center block lg:hidden overflow-hidden mb-5"  ref={headingRef}>
         <span className="font-calvino">Why</span>
         <span className="font-calvino-italic"> you </span>
         <span className="font-calvino">are here!</span>
@@ -94,13 +94,13 @@ const WhyYouAreHereSection = () => {
       <div className="block lg:hidden mb-5 w-full overflow-x-hidden">
         <Slider {...settings}>
           <div className="px-1">
-            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
+            <img src={imageUrl} alt="Kids Yoga" className=" w-full" />
           </div>
           <div className="px-1">
-            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
+            <img src={imageUrl} alt="Kids Yoga" className=" w-full" />
           </div>
           <div className="px-1">
-            <img src={imageUrl} alt="Kids Yoga" className=" w-full mb-5" />
+            <img src={imageUrl} alt="Kids Yoga" className=" w-full" />
           </div>
         </Slider>
       </div>
@@ -132,7 +132,7 @@ const WhyYouAreHereSection = () => {
               {[...Array(5)].map((_, i) => (
                 <li
                   key={i}
-                  className="flex items-start space-x-3 body-t body-t-color"
+                  className="flex items-center space-x-3 body-t body-t-color"
                 >
                   <span className="mt-1 w-3 h-3 rounded-full bg-pink-400 inline-block"></span>
                   <span>

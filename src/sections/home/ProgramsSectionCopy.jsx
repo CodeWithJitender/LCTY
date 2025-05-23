@@ -78,7 +78,7 @@ const containerRef = useRef();
     <section className="" ref={containerRef}>
       <div className="container-fixed">
         {/* Heading */}
-        <h2 className="secondary-text-1 mb-4 lg:mb-10 max-w-[1000px] text-end ms-auto h2 leading-tight overflow-hidden" ref={headingRef}>
+        <h2 className="secondary-text-1 mb-4 lg:mb-10 max-w-[1000px] md:text-end ms-auto h2 leading-tight overflow-hidden" ref={headingRef}>
           <span className="font-calvino"> Lorem ipsum </span>
           <span className="font-calvino-italic">
             {" "}

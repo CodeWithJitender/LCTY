@@ -61,7 +61,7 @@ export default function BlogSection() {
     <section className="relative" ref={containerRef}>
       <div className="container-fixed">
         <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-[40%] sticky top-40">
+          <div className="lg:w-[40%] ">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-pink-400 font-calvino mb-10 leading-tight overflow-hidden" ref={headingRef}>
               Lorem <span className="italic font-normal">dolor sit</span>{" "}
               <span className="font-bold">amet adipiscing</span>

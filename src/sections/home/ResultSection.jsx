@@ -34,11 +34,11 @@ const ResultSection = () => {
     };
   }, [containerRef.current, headingRef.current]);
   return (
-    <section className="w-full px-4 py-16 bg-white overflow-hidden" ref={containerRef}>
+    <section className="w-full  py-16 bg-white overflow-hidden" ref={containerRef}>
       <div className="container-fixed">
         <div className="max-w-[1400px]  space-y-10">
           {/* Top Text */}
-          <div className="text-center md:text-left max-w-[1000px]">
+          <div className=" md:text-left max-w-[1000px]">
             <h2 className="h2 secondary-text-1 overflow-hidden" ref={headingRef} >
               <span className="font-calvino">Lorem ipsum</span>{" "}
               <span className="font-calvino-italic">

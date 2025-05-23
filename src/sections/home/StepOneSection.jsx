@@ -65,9 +65,11 @@ const StepOneSection = () => {
       <div className="">
         <div className="gallery flex flex-col-reverse lg:flex-row gap-10 ">
           {/* Left Column */}
-          <div className="left px-5 lg:px-[80px] lg:w-[50%]">
+          <div className="left pb-7 lg:pb-0 px-5 lg:px-[80px] lg:w-[50%]">
             <div className="desktopContent">
               <div className="desktopContentSection text-white  lg:h-screen flex flex-col justify-center">
+                <img src="Step-1.png" alt="" className="w-full block lg:hidden" />
+
                 {/* Top Row with icon and step number */}
                 <div className="flex items-center justify-between border-b border-white pb-2">
                   <div className="text-2xl">
@@ -110,6 +112,8 @@ const StepOneSection = () => {
                 </a>
               </div>
               <div className="desktopContentSection text-white  lg:h-screen flex flex-col justify-center">
+                <img src="Step-1.png" alt="" className="w-full block lg:hidden" />
+              
                 {/* Top Row with icon and step number */}
                 <div className="flex items-center justify-between border-b border-white pb-2">
                   <div className="text-2xl">
@@ -152,6 +156,8 @@ const StepOneSection = () => {
                 </a>
               </div>
               <div className="desktopContentSection text-white  lg:h-screen flex flex-col justify-center">
+                <img src="Step-1.png" alt="" className="w-full block lg:hidden" />
+               
                 {/* Top Row with icon and step number */}
                 <div className="flex items-center justify-between border-b border-white pb-2">
                   <div className="text-2xl">
@@ -194,6 +200,8 @@ const StepOneSection = () => {
                 </a>
               </div>
               <div className="desktopContentSection text-white  lg:h-screen flex flex-col justify-center">
+                <img src="Step-1.png" alt="" className="w-full block lg:hidden" />
+               
                 {/* Top Row with icon and step number */}
                 <div className="flex items-center justify-between border-b border-white pb-2">
                   <div className="text-2xl">
@@ -236,6 +244,8 @@ const StepOneSection = () => {
                 </a>
               </div>
               <div className="desktopContentSection text-white  lg:h-screen flex flex-col justify-center">
+                <img src="Step-1.png" alt="" className="w-full block lg:hidden" />
+               
                 {/* Top Row with icon and step number */}
                 <div className="flex items-center justify-between border-b border-white pb-2">
                   <div className="text-2xl">
@@ -281,7 +291,7 @@ const StepOneSection = () => {
           </div>
 
           {/* Right Column (Image) */}
-          <div className="right flex flex-col justify-center items-center lg:h-screen bg-[#FFAFFF]  lg:w-[50%]">
+          <div className="right  flex-col justify-center items-center lg:h-screen bg-[#FFAFFF]  lg:w-[50%] hidden lg:flex ">
             <div className="desktopPhotos relative overflow-hidden  w-[40vw] h-[40vw]">
               <div className="desktopPhoto absolute">
                 <img src="Step-1.png" alt="" className="w-full" />
