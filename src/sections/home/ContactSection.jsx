@@ -44,7 +44,7 @@ function ContactSection() {
           <span className="font-calvino-italic"> dolor sit amet </span>
           <span className="font-calvino">adipiscing</span>
         </h1>
-        <p className="max-w-[1200px] m-auto md:text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. </p>
+        <p className="max-w-[1200px] m-auto md:text-center mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. </p>
         <div className="flex md:justify-center mt-10">
             <ButtonPrimary link="/contact-us" text="Contact Us"/>
         </div>

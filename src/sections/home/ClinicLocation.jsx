@@ -79,7 +79,7 @@ export default function ClinicLocation() {
   return (
     <section className="clinic-location" ref={containerRef}>
       <div className="container-fixed">
-        <h1 className="h1 secondary-text-1 overflow-hidden" ref={headingRef}>
+        <h1 className="h1 secondary-text-1 overflow-hidden text-center md:text-start" ref={headingRef}>
           <span className="font-calvino">Clinic </span>
           <span className="font-calvino-italic">location </span>
         </h1>
@@ -91,7 +91,7 @@ export default function ClinicLocation() {
           <div className="xl:translate-y-[-35%]"><Card data={clinics[3]} /></div>
         </div>
 
-        <div className="mt-10 xl:max-w-[600px] ms-auto">
+        <div className="mt-10 xl:max-w-[600px] ms-auto text-center md:text-start px-2 md:p-auto">
           <p className="body-t-color btn-t mb-8">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan
             eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae

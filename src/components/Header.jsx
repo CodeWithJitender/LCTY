@@ -55,7 +55,7 @@ const Header = () => {
   );
 
   return (
-    <header  className=" w-full bg-white z-40">
+    <header  className=" w-full bg-white z-40 relative">
       <div className="flex justify-between items-center px-6 py-4">
         <button
           onClick={() => setMenuOpen(true)}
