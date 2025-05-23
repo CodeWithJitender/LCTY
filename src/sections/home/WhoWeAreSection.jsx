@@ -1,37 +1,42 @@
-import { useRef } from "react";
 import ButtonSecondary from "../../components/ButtonSecondary";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/all";
 
 const backgroundImage = "yoga-therapy-2.png";
-
+// Register plugins
+gsap.registerPlugin(ScrollTrigger);
 const WhoWeAreSection = () => {
   const containerRef = useRef();
   const headingRefWho = useRef();
 
-  useGSAP(
-    () => {
-      const split = new SplitType(headingRefWho.current, {
-        type: "chars, words",
-      });
-      // Animate heading lines
-      gsap.from(split.chars, {
-        opacity: 0.2,
-        duration: 0.5,
-        stagger: 0.1,
-        ease: "power4.out",
-        scrub: true,
-        // scrollTrigger: {
-        //   trigger: containerRef.current,
-        //   start: "top 20px",
-        //   markers: true,
-        // },
-      });
-    },
-    { scope: containerRef }
-  );
+useGSAP(() => {
+    const split = new SplitType(headingRefWho.current, {
+      type: "chars, words",
+    });
 
+    gsap.from(split.chars, {
+      opacity: 0.2,
+      duration: 1,
+      stagger: 0.1,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 50%",
+        end: "top 10%",
+        scroller:".main",
+        scrub: true,
+      },
+    });
+
+    return () => {
+      split.revert();
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, [containerRef.current, headingRefWho.current]);
+  
   return (
     <section
       className="relative bg-cover bg-center bg-no-repeat  flex items-center"
@@ -56,9 +61,11 @@ const WhoWeAreSection = () => {
           {/* Right side: Text + Button */}
           <div
             className="flex flex-col justify-center space-y-6 font-medium leading-tight"
-            ref={headingRefWho}
+            
           >
-            <p className="h2 text-white">
+            <div className=""ref={headingRefWho}>
+
+            <p className="h2 text-white" >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               accumsan eros non fringilla faucibus. Sed scelerisque ultrices
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
@@ -70,6 +77,7 @@ const WhoWeAreSection = () => {
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
               fermentum commodo.
             </p>
+            </div>
             <ButtonSecondary text="Discover" link="discover" />
           </div>
         </div>

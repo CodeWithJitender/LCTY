@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 import { Link } from "react-router-dom";
 const blogs = [
   {
@@ -27,30 +29,39 @@ const blogs = [
 ];
 
 export default function BlogSection() {
-   const containerRef = useRef();
+ const containerRef = useRef();
   const headingRef = useRef();
-    useGSAP(() => {
-    const splitText = new SplitType(headingRef.current, {
+
+  useGSAP(() => {
+    const split = new SplitType(headingRef.current, {
       type: "lines",
-      linesClass: "lineChildren",
     });
-    const tl = gsap.timeline();
-    tl.from(splitText.lines, {
-      duration: 1,
-      y: 300,
+
+    gsap.from(split.lines, {
       opacity: 0,
+      y: 400,
+      duration: 1,
       stagger: 0.1,
-      ease: "power2.out",
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top 50%",
+        end: "top 10%",
+        scroller: ".main",
+        // scrub: true,
+      },
     });
+
     return () => {
-      splitText.revert();
+      split.revert();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, { scope: containerRef });
+  }, [containerRef.current, headingRef.current]);
   return (
-    <section className="" ref={containerRef}>
+    <section className="relative" ref={containerRef}>
       <div className="container-fixed">
         <div className="flex flex-col lg:flex-row">
-          <div className="lg:w-[40%]">
+          <div className="lg:w-[40%] sticky top-40">
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-pink-400 font-calvino mb-10 leading-tight overflow-hidden" ref={headingRef}>
               Lorem <span className="italic font-normal">dolor sit</span>{" "}
               <span className="font-bold">amet adipiscing</span>

@@ -5,6 +5,8 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SplitType from "split-type";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 // const clinics  = [
 //     {
@@ -27,23 +29,31 @@ import SplitType from "split-type";
 export default function ClinicLocation() {
    const containerRef = useRef();
   const headingRef = useRef();
-    useGSAP(() => {
-    const splitText = new SplitType(headingRef.current, {
+  useGSAP(() => {
+    const split = new SplitType(headingRef.current, {
       type: "lines",
-      linesClass: "lineChildren",
     });
-    const tl = gsap.timeline();
-    tl.from(splitText.lines, {
-      duration: 1,
-      y: 300,
+
+    gsap.from(split.lines, {
       opacity: 0,
+      y: 400,
+      duration: 1,
       stagger: 0.1,
-      ease: "power2.out",
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top center",
+        // end: "top 80%",
+        scroller: ".main",
+        // scrub: true,
+      },
     });
+
     return () => {
-      splitText.revert();
+      split.revert();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, { scope: containerRef });
+  }, [containerRef.current, headingRef.current]);
   const clinics = [
     {
       title: "Clinic 1",

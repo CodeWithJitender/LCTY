@@ -18,17 +18,17 @@ function Home() {
     <div className="">
       <Hero/>
       <WhyYouAreHereSection />
-      {/* <WhoWeAreSection /> */}
-      {/* <ProgramsSection /> */}
-      {/* <ProgramsSectionCopy /> */}
-      {/* <LetsShow /> */}
-      {/* <StepOneSection /> */}
-      {/* <ResultSection /> */}
-      {/* <SuccessStories /> */}
-      {/* <ClinicLocation /> */}
-      {/* <MarqueeHome /> */}
-      {/* <ContactSection /> */}
-      {/* <BlogSection /> */}
+      <WhoWeAreSection />
+      <ProgramsSection />
+      <ProgramsSectionCopy />
+      <LetsShow />
+      <StepOneSection />
+      <ResultSection />
+      <SuccessStories />
+      <ClinicLocation />
+      <MarqueeHome />
+      <ContactSection />
+      <BlogSection />
     </div>
   );
 }

@@ -30,7 +30,7 @@ const WhyYouAreHereSection = () => {
     gsap.from(split.lines, {
       y: 400,
       opacity: 0,
-      duration: 2,
+      duration: 1,
       stagger: 0.1,
       ease: "power4.out",
       scrollTrigger: {
@@ -38,8 +38,7 @@ const WhyYouAreHereSection = () => {
         start: "top 50%",
         end: "top 20%",
         scroller:".main",
-        scrub: 1,
-        markers: true,
+        // scrub: 1,
       },
     });
 
@@ -115,7 +114,7 @@ const WhyYouAreHereSection = () => {
           </div>
 
           {/* Text Content */}
-          <div className="why-text-content sticky top-5" >
+          <div className="why-text-content sticky top-40" >
             <h2 className="h1 mb-4 secondary-text-1 hidden lg:block overflow-hidden" ref={headingRef}> 
               <span className="font-calvino">Why</span>
               <span className="font-calvino-italic"> you </span>
