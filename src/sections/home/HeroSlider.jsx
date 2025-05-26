@@ -7,66 +7,81 @@ import Card from "../../components/Card";
 
 function HeroSlider() {
   const settings = {
-  centerMode: true,
-  centerPadding: "60px", // optional: adjust padding around centered slide
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 5, // default (large screen)
-  slidesToScroll: 1,
-  arrows: true,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  responsive: [
-    {
-      breakpoint: 1280, // < 1280px
-      settings: {
-        slidesToShow: 3,
-        centerPadding: "40px",
+    centerMode: true,
+    centerPadding: "60px", // optional: adjust padding around centered slide
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5, // default (large screen)
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 1280, // < 1280px
+        settings: {
+          slidesToShow: 3,
+          centerPadding: "40px",
+        },
       },
-    },
-    {
-      breakpoint: 1024, // < 1024px
-      settings: {
-        slidesToShow: 2,
-        centerPadding: "30px",
+      {
+        breakpoint: 1024, // < 1024px
+        settings: {
+          slidesToShow: 2,
+          centerPadding: "30px",
+        },
       },
-    },
-    {
-      breakpoint: 640, // < 640px (mobile)
-      settings: {
-        slidesToShow: 1,
-        centerPadding: "20px",
+      {
+        breakpoint: 640, // < 640px (mobile)
+        settings: {
+          slidesToShow: 1,
+          centerPadding: "20px",
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 
   const slides = [
     {
       title: "Physical Therapy",
       image: "yoga-therapy.png",
       redirectUrl: "/yoga-therapy",
+      bgColor: "primary-bg-2",
+      btnBg: "secondary-bg-1",
+      btnText: "text-white",
     },
     {
       title: "Occupational Therapy",
       image: "yoga-therapy.png",
       redirectUrl: "/yoga-therapy",
+      bgColor: "primary-bg-2",
+      btnBg: "secondary-bg-1",
+      btnText: "text-white",
     },
     {
       title: "Yoga Therapy",
       image: "yoga-therapy.png",
       redirectUrl: "/yoga-therapy",
+      bgColor: "primary-bg-2",
+      btnBg: "secondary-bg-1",
+      btnText: "text-white",
     },
     {
       title: "LCTY Tutor Therapy",
       image: "yoga-therapy.png",
       redirectUrl: "/yoga-therapy",
+      bgColor: "primary-bg-2",
+      btnBg: "secondary-bg-1",
+      btnText: "text-white",
     },
     {
       title: "ABA",
       image: "yoga-therapy.png",
       redirectUrl: "/yoga-therapy",
+      bgColor: "primary-bg-2",
+      btnBg: "secondary-bg-1",
+      btnText: "text-white",
     },
   ];
   return (

@@ -1,9 +1,14 @@
 import React from 'react'
+import DayCare from '../sections/CommunityPartners/DayCare'
+import PublicSchool from '../sections/CommunityPartners/PublicSchool'
+import Prospective from '../sections/CommunityPartners/Prospective'
 
 function CommunityPartners() {
   return (
     <div>
-      Community Partners
+     <DayCare />
+     <PublicSchool />
+     <Prospective />
     </div>
   )
 }

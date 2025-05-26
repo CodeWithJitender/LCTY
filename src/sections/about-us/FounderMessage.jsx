@@ -26,14 +26,16 @@ const FounderMessage = () => {
       </div>
 
       {/* Circle Indicators */}
-      <div className="container-xxl pb-[50px]">
-        <div className="flex justify-evenly  flex-wrap relative translate-y-[-50%] ">
-          {[...Array(4)].map((_, i) => (
-            <span
-              key={i}
-              className="w-40 h-40 bg-[#FFAAFF] rounded-full"
-            ></span>
-          ))}
+      <div className="py-[50px] md:pb-[50px] md:pt-[0px]">
+        <div className="container-xxl">
+          <div className="flex justify-evenly gap-10 flex-wrap relative md:translate-y-[-50%] ">
+            {[...Array(4)].map((_, i) => (
+              <span
+                key={i}
+                className="w-40 h-40 bg-[#FFAAFF] rounded-full"
+              ></span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

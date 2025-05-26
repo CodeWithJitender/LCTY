@@ -3,7 +3,7 @@ import AboutSLider from "./AboutSlider";
 
 export default function Vision() {
   return (
-    <section className="relative bg-white py-16 ps-4 md:ps-8">
+    <section className="relative bg-white py-16 ps-4 md:ps-8 overflow-x-hidden">
       <div className="flex flex-col-reverse md:flex-row justify-between ">
         {/* Background Mandala (optional) */}
 

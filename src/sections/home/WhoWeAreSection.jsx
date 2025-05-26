@@ -65,13 +65,13 @@ useGSAP(() => {
           >
             <div className=""ref={headingRefWho}>
 
-            <p className="md:h2 text-white" >
+            <p className="h2 text-white" >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               accumsan eros non fringilla faucibus. Sed scelerisque ultrices
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci
               fermentum commodo.
             </p>
-            <p className="md:h2 text-white">
+            <p className="h2 text-white">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
               accumsan eros non fringilla faucibus. Sed scelerisque ultrices
               dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci

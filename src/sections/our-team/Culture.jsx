@@ -43,7 +43,7 @@ const Culture = () => {
     ],
   };
   return (
-    <section className="bg-white pt-16 md:py-12 ">
+    <section className="bg-white ">
       <h2 className="h1 mb-4 secondary-text-1 px-5 text-center block lg:hidden">
         <span className="font-calvino">Why</span>
         <span className="font-calvino-italic"> you </span>

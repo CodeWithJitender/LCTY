@@ -3,7 +3,7 @@ import AboutSLider from "./AboutSlider";
 
 export default function Mission() {
   return (
-    <section className="relative bg-white py-16 pe-4 md:pe-8">
+    <section className="relative bg-white py-16 pe-4 md:pe-8 overflow-x-hidden">
       <div className="flex flex-col md:flex-row justify-between ">
         {/* Background Mandala (optional) */}
  <div className="w-full md:w-[30%]">

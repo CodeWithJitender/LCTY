@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ButtonPrimary({ text, link }) {
   return (
     <Link
-      to={`/${link}`}
+      to={`${link}`}
       className=""
     >
       <div className="button-primary font-archivo  secondary-text-1 body-t">
