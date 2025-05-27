@@ -1,15 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
 
+:root {
+  --bg-background: white;
+  --clr-card: #ff96ffde;
+  --clr-1: #ff96ffde;
+  --clr-2: #ffd6ff;
+  --clr-3: #ffd6ff;
+}
 body {
   overflow-x: hidden !important;
 }
 .button-primary {
-  background: linear-gradient(to right, #ff96ffde 0%, #ffd6ff 100%) !important;
+  /* background: linear-gradient(to right, #ff96ffde 0%, #ffd6ff 100%) !important; */
+  position: relative;
   display: inline-block;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 50px;
+  cursor: pointer;
+  background-color: var(--clr-card);
+}
+
+.button-primary::after,
+.button-primary::before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  inset: -0.5rem;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-card),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-2),
+    var(--clr-1),
+    var(--clr-card)
+  );
+  border-radius: inherit;
+}
+
+/* .card::after {
+  filter: blur(3rem);
+} */
+
+@keyframes rotate {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.button-primary:hover:after,
+.button-primary:hover:before {
+  animation: rotate 2.5s linear infinite;
 }
 .font-calvino-italic {
   font-family: "Calvino Grande Trial";
@@ -144,6 +196,7 @@ p {
   color: #8a63ff;
   font-size: clamp(14px, 5vw, 22px);
 }
+
 .outer-circle {
   background: linear-gradient(
     180.04deg,
@@ -157,6 +210,7 @@ p {
     rgba(255, 255, 255, 0.05) 92.61%
   );
 }
+
 .inner-circle {
   background: linear-gradient(
     180.04deg,
@@ -170,10 +224,12 @@ p {
     rgba(255, 255, 255, 0.05) 92.61%
   );
 }
+
 .journey-circle {
   position: relative;
   /* z-index: 10 ; */
 }
+
 .journey-img::after {
   content: "";
   position: absolute;
@@ -186,7 +242,6 @@ p {
     #ffd6ff 44.09%,
     rgba(255, 214, 255, 0) 100%
   );
-
   transform: translate(-50%, 10%);
 }
 
@@ -209,6 +264,7 @@ p {
 .testimonial-item {
   background-image: url("testimonial-bg.png");
 }
+
 @media screen and (max-width: 768px) {
   .container-fixed {
     padding: 50px 20px;

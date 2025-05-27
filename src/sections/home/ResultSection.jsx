@@ -74,10 +74,10 @@ const ResultSection = () => {
               <div className="text-5xl font-archivo font-bold mt-5 mb-3" style={{fontSize:"clamp(30px, 5vw, 55px)"}}>
                 6546
               </div>
-              <p className="font-archivo mb-3">
+              <p className="font-archivo mb-3 text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
-              <p className=" font-archivo ">
+              <p className=" font-archivo  text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </p>
             </div>

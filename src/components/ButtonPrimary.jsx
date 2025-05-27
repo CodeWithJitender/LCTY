@@ -9,7 +9,9 @@ function ButtonPrimary({ text, link }) {
     >
       <div className="button-primary font-archivo  secondary-text-1 body-t">
         {/* White inner area */}
-        <span className="relative z-10  rounded-full bg-white py-3 px-5 md:px-[23px] md:py-5 inline-block">{text}</span>
+        <span className="relative z-10  rounded-full bg-white py-3 px-5 md:px-[23px] md:py-5 inline-block">
+          {text}
+        </span>
       </div>
     </Link>
   );

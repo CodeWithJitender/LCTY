@@ -51,7 +51,7 @@ useGSAP(() => {
         <div className="relative z-10  grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10 text-white">
           {/* Left side: Heading */}
           <div className="flex items-center justify-start  md:text-left">
-            <h1 className="h1">
+            <h1 className="h1"  >
               <span className="font-calvino">Who</span>{" "}
               <span className="font-calvino-italic">we</span>{" "}
               <span className="font-calvino">are</span>

@@ -1,6 +1,7 @@
 import React from "react";
 import ModernTherapySlider from "./ModernTherapySlider";
 import MainHeading from "../../components/MainHeading";
+import Hero from "../../components/Hero";
 
 function ModernTherapy() {
   const heading = {
@@ -14,17 +15,19 @@ function ModernTherapy() {
         class: "text-center",
       },
     ],
+    textAlign:"text-center",
   };
   return (
-    <div className="modern-therapy">
+    <div className="modern-therapy ">
       <div className="container-fixed">
         <div className="max-w-7xl m-auto text-center secondary-text-1">
-          <MainHeading title={heading.title} paragraphs={heading.paragraphs} />
+          <Hero data={heading} />
         </div>
-        <div className="mt-5">
+        
+      </div>
+      <div className="mt-5">
           <ModernTherapySlider />
         </div>
-      </div>
     </div>
   );
 }

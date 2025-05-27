@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from "../../components/Card";
 
-function HeroSlider() {
+function HeroSlider({slides}) {
   const settings = {
     centerMode: true,
     centerPadding: "60px", // optional: adjust padding around centered slide
@@ -42,48 +42,7 @@ function HeroSlider() {
     ],
   };
 
-  const slides = [
-    {
-      title: "Physical Therapy",
-      image: "yoga-therapy.png",
-      redirectUrl: "/yoga-therapy",
-      bgColor: "primary-bg-2",
-      btnBg: "secondary-bg-1",
-      btnText: "text-white",
-    },
-    {
-      title: "Occupational Therapy",
-      image: "yoga-therapy.png",
-      redirectUrl: "/yoga-therapy",
-      bgColor: "primary-bg-2",
-      btnBg: "secondary-bg-1",
-      btnText: "text-white",
-    },
-    {
-      title: "Yoga Therapy",
-      image: "yoga-therapy.png",
-      redirectUrl: "/yoga-therapy",
-      bgColor: "primary-bg-2",
-      btnBg: "secondary-bg-1",
-      btnText: "text-white",
-    },
-    {
-      title: "LCTY Tutor Therapy",
-      image: "yoga-therapy.png",
-      redirectUrl: "/yoga-therapy",
-      bgColor: "primary-bg-2",
-      btnBg: "secondary-bg-1",
-      btnText: "text-white",
-    },
-    {
-      title: "ABA",
-      image: "yoga-therapy.png",
-      redirectUrl: "/yoga-therapy",
-      bgColor: "primary-bg-2",
-      btnBg: "secondary-bg-1",
-      btnText: "text-white",
-    },
-  ];
+
   return (
     <div className="hero-slider mt-5 w-full overflow-hidden">
       <Slider {...settings}>

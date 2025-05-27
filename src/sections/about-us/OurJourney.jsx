@@ -33,9 +33,9 @@ export default function OurJourney() {
   return (
     <section className="py-16 ">
       {/* Title */}
-      <h2 className="text-center text-4xl font-semibold mb-16">
-        <span className="text-pink-500 font-bold">Our </span>
-        <span className="italic text-pink-400">journey</span>
+      <h2 className="h1 secondary-text-1 leading-none text-center mb-16">
+        <span className="font-calvino">Our </span>
+        <span className="font-calvino-italic">journey</span>
       </h2>
 
       {/* Journey Cards Container*/}

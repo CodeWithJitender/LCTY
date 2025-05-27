@@ -31,7 +31,7 @@ function PublicSchool() {
   return (
     <section className="public-school">
       <div className="container-fixed">
-        <h2 className="h1 text-center mb-8">
+        <h2 className="h1 text-center secondary-text-1 mb-8">
           <span className="font-calvino">Public</span>
           <span className="font-calvino-italic"> schools for </span>
           <span className="font-calvino">ABA</span>

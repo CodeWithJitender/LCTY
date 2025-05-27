@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/all";
+import Hero from "../../components/Hero";
 
 const imageUrl = "Yoga3.png";
 
@@ -84,6 +85,19 @@ const WhyYouAreHereSection = () => {
       },
     ],
   };
+    const data = {
+    title: [
+      { text: "Little Champs", class: "font-calvino" },
+      { text: "therapy & yoga", class: "font-calvino-italic" },
+    ],
+    paragraphs: [
+      {
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan eros non fringilla faucibus. Sed scelerisque ultrices dui, vitae bibendum lorem bibendum ac. Duis eu nisi non orci fermentum commodo. ",
+        class: "text-center",
+      },
+    ],
+    textAlign:"text-start",
+  };
   return (
     <section ref={containerRef} className="bg-white pt-16 md:py-12"  >
       <h2 className="h1 secondary-text-1 px-5 text-center block lg:hidden overflow-hidden mb-5"  ref={headingRef}>
@@ -115,19 +129,7 @@ const WhyYouAreHereSection = () => {
 
           {/* Text Content */}
           <div className="why-text-content sticky top-40" >
-            <h2 className="h1 mb-4 secondary-text-1 hidden lg:block overflow-hidden" ref={headingRef}> 
-              <span className="font-calvino">Why</span>
-              <span className="font-calvino-italic"> you </span>
-              <span className="font-calvino">are here!</span>
-            </h2>
-
-            <p className="body-t mb-6 body-t-color lg:mt-10 md:mt-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              accumsan eros Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit. In accumsan erosLorem ipsum dolor sit amet, consectetur
-              adipiscing elit. In accumsan eros
-            </p>
-
+            <Hero data={data}  />
             <ul className="space-y-3 mb-8">
               {[...Array(5)].map((_, i) => (
                 <li

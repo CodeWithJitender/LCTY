@@ -17,6 +17,8 @@ import CommunityPartners from "./pages/CommunityPartners";
 import ContactUs from "./pages/ContactUs";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ScrollToTop() {
   const location = useLocation();
@@ -29,6 +31,14 @@ function ScrollToTop() {
 }
 
 function App() {
+
+   useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: false,     // whether animation should happen only once
+    });
+     AOS.refresh();
+  }, []);
   const scrollRef = useRef(null);
   const locoScroll = useRef(null);
 

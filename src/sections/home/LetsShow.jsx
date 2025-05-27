@@ -43,7 +43,9 @@ function LetsShow() {
           <span className="font-calvino-italic"> show you</span>
           <span className="font-calvino"> how to</span>
         </h1>
-        <ButtonPrimary link="discover" text="Register Now" />
+        <div className="">
+          <ButtonPrimary link="discover" text="Register Now" />
+        </div>
       </div>
     </div>
   );
