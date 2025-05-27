@@ -34,7 +34,7 @@ const Header = () => {
   const [searchOpen, setSearchOpen] = useState(false);
 
   const Overlay = ({ children, onClose, side, btnSide }) => (
-    <div className="fixed inset-0 p-3">
+    <div className="fixed inset-0 p-3 bg-[#ffffffb2]">
       <div
         className={`md:fixed ${side} w-full primary-bg-2 md:w-[500px] p-6 rounded-xl  text-white z-50`}
       >

@@ -36,7 +36,7 @@ function LetsShow() {
     };
   }, [containerRef.current, headingRef.current]);
   return (
-    <div className="bg-white pb-[50px] h-[100vh] flex items-center justify-center" ref={containerRef}>
+    <div className="bg-white  h-[100vh] flex items-center justify-center" ref={containerRef}>
       <div className="container-fixed flex items-center gap-5 justify-center flex-col text-center lg:text-left lg:flex-row">
         <h1 className="secondary-text-1 h1 mb-4 overflow-hidden text-center" ref={headingRef}>
           <span className="font-calvino">Let’s</span>
