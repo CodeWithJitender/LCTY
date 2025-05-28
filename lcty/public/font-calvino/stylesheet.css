@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Calvino Grande Trial';
+    src: url('CalvinoGrandeTrial-LightItalic.eot');
+    src: url('CalvinoGrandeTrial-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('CalvinoGrandeTrial-LightItalic.woff2') format('woff2'),
+        url('CalvinoGrandeTrial-LightItalic.woff') format('woff'),
+        url('CalvinoGrandeTrial-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Calvino Grande Trial';
+    src: url('CalvinoGrandeTrial-Semibold.eot');
+    src: url('CalvinoGrandeTrial-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('CalvinoGrandeTrial-Semibold.woff2') format('woff2'),
+        url('CalvinoGrandeTrial-Semibold.woff') format('woff'),
+        url('CalvinoGrandeTrial-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

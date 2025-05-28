@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+:root {
+  --bg-background: white;
+  --clr-card: #ff96ffde;
+  --clr-1: #ff96ffde;
+  --clr-2: #ffd6ff;
+  --clr-3: #ffd6ff;
+}
+.font-calvino-italic {
+  font-family: "Calvino Grande Trial";
+  font-weight: 300;
+  font-style: italic;
+  line-height: 100%;
+}
+
+.font-calvino {
+  font-family: "Calvino Grande Trial";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 100%;
+}
+
+.font-archivo {
+  font-family: "Archivo", sans-serif;
+  line-height: 100%;
+}
+
+.container-fixed {
+  max-width: 1600px;
+  margin: auto;
+  padding: 100px 50px;
+}
+.container-xxl {
+  max-width: 1600px;
+  margin: auto;
+  /* padding: 0px 50px; */
+}
+
+.primary-bg-2 {
+  background-color: #ae93ff;
+}
+.primary-text-2 {
+  color: #ae93ff;
+}
+
+.secondary-bg-1 {
+  background-color: #ff96ff;
+}
+.secondary-text-1 {
+  color: #ff96ff;
+}
+
+.button-primary {
+  position: relative;
+  display: inline-block;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: var(--clr-card);
+  font-size: clamp(14px, 5vw, 22px);
+}
+
+.button-primary::after,
+.button-primary::before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  inset: -0.5rem;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-card),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-2),
+    var(--clr-1),
+    var(--clr-card)
+  );
+  border-radius: inherit;
+}
+.button-primary:hover:after,
+.button-primary:hover:before {
+  animation: rotate 2.5s linear infinite;
+}
+/* .card::after {
+  filter: blur(3rem);
+} */
+
+@keyframes rotate {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+.h1 {
+  font-size: clamp(40px, 5vw, 85px);
+  line-height: normal;
+}
+.h2 {
+  font-size: clamp(24px, 5vw, 40px);
+}
+.h3 {
+  font-size: clamp(35px, 5vw, 60px);
+}
+
+.body-t {
+  font-size: clamp(14px, 5vw, 22px);
+}
+
+.nav-t {
+  font-size: clamp(16px, 5vw, 24px);
+}
+
+p {
+  color: #8a63ff;
+  font-size: clamp(14px, 5vw, 22px);
+}
+.body-t-color {
+  color: #8a63ff;
+}
+
+.band {
+  width: 105%;
+  height: 100%;
+  /* background-color: #8a63ff; */
+  transform: rotate(-2.8deg) translate(-10px, 50px);
+  padding: 40px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+p {
+  color: #8a63ff;
+  font-size: clamp(14px, 5vw, 22px);
+}
+
+.outer-circle {
+  background: linear-gradient(
+    180.04deg,
+    rgba(255, 150, 255, 0.4) 0.03%,
+    rgba(138, 99, 255, 0.16) 99.83%
+  );
+  border: 1.7px solid;
+  border-image-source: linear-gradient(
+    148.64deg,
+    rgba(255, 150, 255, 0.5) 7.39%,
+    rgba(255, 255, 255, 0.05) 92.61%
+  );
+}
+
+.inner-circle {
+  background: linear-gradient(
+    180.04deg,
+    rgba(255, 150, 255, 0.4) 0.03%,
+    rgba(138, 99, 255, 0.16) 99.83%
+  );
+  border: 1.7px solid;
+  border-image-source: linear-gradient(
+    148.64deg,
+    rgba(255, 150, 255, 0.5) 7.39%,
+    rgba(255, 255, 255, 0.05) 92.61%
+  );
+}
+
+.journey-circle {
+  position: relative;
+  /* z-index: 10 ; */
+}
+
+.journey-img::after {
+  content: "";
+  position: absolute;
+  top: 88px;
+  left: 50%;
+  width: 10px;
+  height: 100%;
+  background: linear-gradient(
+    /* 90deg, */ #ff96ff -24.25%,
+    #ffd6ff 44.09%,
+    rgba(255, 214, 255, 0) 100%
+  );
+  transform: translate(-50%, 10%);
+}
+
+/* Program page  */
+.slider-container .slick-slide {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.slider-container .slick-slide.slick-active.slick-center.slick-current {
+  opacity: 1;
+  transform: scale(1.1);
+  overflow: visible;
+  transition: 0.5s;
+}
+.slick-list {
+  overflow: visible !important;
+  transition: 0.5s;
+}
+
+.testimonial-item {
+  background-image: url("testimonial-bg.png");
+}
+
+@media screen and (max-width: 768px) {
+  .container-fixed {
+    padding: 50px 20px;
+  }
+  .container-xxl {
+    padding: 0px 20px;
+  }
+  .journey-img::after {
+    width: 0px;
+  }
+  .h1 {
+    font-size: (40px, 5vw, 85px);
+  }
+  .h2 {
+    font-size: clamp(22px, 5vw, 40px);
+  }
+
+  .body-t {
+    font-size: clamp(14px, 5vw, 22px);
+  }
+
+  .btn-t {
+    font-size: clamp(14px, 5vw, 22px);
+  }
+  .nav-t {
+    font-size: clamp(16px, 5vw, 24px);
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-fixed {
+    padding: 40px 15px;
+  }
+  .body-t {
+    font-size: clamp(14px, 5vw, 14px);
+  }
+
+  .btn-t {
+    font-size: clamp(14px, 5vw, 14px);
+  }
+  .nav-t {
+    font-size: clamp(14px, 5vw, 14px);
+  }
+  p {
+    font-size: 14px;
+  }
+}
